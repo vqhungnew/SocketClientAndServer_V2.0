@@ -34,7 +34,9 @@ namespace SocketClientAndServer
                     
                     Console.WriteLine("\nYou select your ROLE: " + your_choice + ":" + your_role);
                     showIpAddress();
-                    runAsClient();
+                    runAsClient(
+                //Select IP to run by ORDER
+                Console);
                     break;
                 case "2":
                     your_role = role_2;
@@ -51,7 +53,7 @@ namespace SocketClientAndServer
             Console.ReadLine(); // Wait ENTER to exit
 
         }
-        static void runAsClient()
+        static void runAsClient(Console console)
           {
 
             try
@@ -62,11 +64,10 @@ namespace SocketClientAndServer
                 // uses port 11111 on the local 
                 // computer.
                 IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
-                
-                //Select IP to run by ORDER
-                Console.WriteLine("Enter the IP you want to use:");
-                int addOrder = Int16.Parse(Console.ReadLine());
-                IPAddress ipAddr = ipHost.AddressList[addOrder];
+                Console.WriteLine("Enter the SERVER's IP you want to use:");
+                //int addOrder = Int16.Parse(Console.ReadLine());
+                string ipServer=Console.ReadLine();
+                IPAddress ipAddr = IPAddress.Parse(ipServer); //AddressList[addOrder];
                 Console.WriteLine("You are using IP:" + ipAddr.ToString());
 
                 //Select PORT to run, default PORT:8888
