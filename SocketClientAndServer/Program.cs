@@ -16,7 +16,7 @@ namespace SocketClientAndServer
                 "- Easy to understand a few technical items.\n" +
                 "- BASIC commands.\n" +
                 "- No typing CONVERSATION between Server & Client\n" +
-                "- MUST Select IP to run.\n" +
+                "- MUST ENTER SERVER'S IP to run.\n" +
                 "- MUST Select PORT to run.\n"+
                 "- CLIENT can Send multi text.Server send Automatically predefined message\n");
 
